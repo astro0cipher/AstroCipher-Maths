@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AstroCipher Math</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background Effects -->
+  <div class="bg-grid"></div>
+  <div class="particles"></div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+      <div class="logo">
+        AstroCipher Math
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#topics">Topics</a></li>
+        <li><a href="#graphs">Graphs</a></li>
+        <li><a href="#formulas">Formulas</a></li>
+        <li><a href="#practice">Practice</a></li>
+      </ul>
+
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+
+      <!-- Left Side -->
+      <div class="hero-text reveal">
+
+        <h1>
+          Visualize Mathematics Like Never Before
+        </h1>
+
+        <p>
+          Learn mathematics through futuristic interactive visual systems,
+          animated graphs, immersive simulations, and visual learning experiences.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="primary-btn">
+            Start Learning
+          </button>
+
+          <button class="secondary-btn">
+            Explore Topics
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Right Side -->
+      <div class="hero-graph reveal">
+        <canvas id="heroCanvas"></canvas>
+      </div>
+
+    </div>
+
+    <!-- Floating Formulas -->
+    <div class="floating-formulas">
+
+      <span>E = mc²</span>
+      <span>∫ x² dx</span>
+      <span>sin(x)</span>
+      <span>e^(iπ)+1=0</span>
+      <span>a²+b²=c²</span>
+
+    </div>
+
+  </header>
+
+  <!-- Topics Section -->
+  <section id="topics" class="topics section">
+
+    <h2 class="section-title reveal">
+      Explore Mathematical Worlds
+    </h2>
+
+    <div class="topic-grid">
+
+      <div class="topic-card reveal">
+        <div class="icon">∑</div>
+
+        <h3>Algebra</h3>
+
+        <p>
+          Solve equations and discover mathematical patterns visually.
+        </p>
+      </div>
+
+      <div class="topic-card reveal">
+        <div class="icon">△</div>
+
+        <h3>Trigonometry</h3>
+
+        <p>
+          Learn angles, waves, and rotations interactively.
+        </p>
+      </div>
+
+      <div class="topic-card reveal">
+        <div class="icon">∫</div>
+
+        <h3>Calculus</h3>
+
+        <p>
+          Understand derivatives and integrals through live graphs.
+        </p>
+      </div>
+
+      <div class="topic-card reveal">
+        <div class="icon">◯</div>
+
+        <h3>Geometry</h3>
+
+        <p>
+          Visualize shapes, dimensions, and transformations.
+        </p>
+      </div>
+
+      <div class="topic-card reveal">
+        <div class="icon">→</div>
+
+        <h3>Vectors</h3>
+
+        <p>
+          Explore magnitude, direction, and vector systems.
+        </p>
+      </div>
+
+      <div class="topic-card reveal">
+        <div class="icon">📊</div>
+
+        <h3>Statistics</h3>
+
+        <p>
+          Analyze and understand data with futuristic visualization.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Graph Section -->
+  <section id="graphs" class="graph-section section">
+
+    <h2 class="section-title reveal">
+      Live Graph Visualization
+    </h2>
+
+    <div class="graph-container reveal">
+
+      <canvas id="graphCanvas"></canvas>
+
+    </div>
+
+  </section>
+
+  <!-- Formula Section -->
+  <section id="formulas" class="formula-section section">
+
+    <h2 class="section-title reveal">
+      Core Mathematical Identities
+    </h2>
+
+    <div class="formula-grid">
+
+      <div class="formula-card reveal">
+        <h3>Pythagorean Theorem</h3>
+        <p>a² + b² = c²</p>
+      </div>
+
+      <div class="formula-card reveal">
+        <h3>Quadratic Formula</h3>
+        <p>x = (-b ± √(b²−4ac)) / 2a</p>
+      </div>
+
+      <div class="formula-card reveal">
+        <h3>Euler Identity</h3>
+        <p>e^(iπ)+1=0</p>
+      </div>
+
+      <div class="formula-card reveal">
+        <h3>Circle Area</h3>
+        <p>A = πr²</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Practice Section -->
+  <section id="practice" class="practice section">
+
+    <h2 class="section-title reveal">
+      Practice & Quiz
+    </h2>
+
+    <div class="quiz-grid">
+
+      <!-- Quiz Card -->
+      <div class="quiz-card reveal">
+
+        <div class="difficulty easy">
+          Easy
+        </div>
+
+        <h3>What is sin(90°)?</h3>
+
+        <div class="options">
+
+          <button>0</button>
+          <button>1</button>
+          <button>2</button>
+          <button>-1</button>
+
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+
+      </div>
+
+      <!-- Quiz Card -->
+      <div class="quiz-card reveal">
+
+        <div class="difficulty medium">
+          Medium
+        </div>
+
+        <h3>Derivative of x² ?</h3>
+
+        <div class="options">
+
+          <button>x</button>
+          <button>2x</button>
+          <button>x²</button>
+          <button>0</button>
+
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress progress2"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features Section -->
+  <section class="features section">
+
+    <h2 class="section-title reveal">
+      Why AstroCipher Math?
+    </h2>
+
+    <div class="feature-grid">
+
+      <div class="feature-card reveal">
+        <h3>Animated Lessons</h3>
+      </div>
+
+      <div class="feature-card reveal">
+        <h3>Interactive Graphs</h3>
+      </div>
+
+      <div class="feature-card reveal">
+        <h3>Practice Tests</h3>
+      </div>
+
+      <div class="feature-card reveal">
+        <h3>AI Explanations</h3>
+      </div>
+
+      <div class="feature-card reveal">
+        <h3>Visual Learning</h3>
+      </div>
+
+      <div class="feature-card reveal">
+        <h3>Real-time Simulations</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <h2>AstroCipher Math</h2>
+
+    <p>
+      Future of Mathematical Visualization
+    </p>
+
+    <div class="socials">
+
+      <span>GitHub</span>
+      <span>Discord</span>
+      <span>Instagram</span>
+      <span>Email</span>
+
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
