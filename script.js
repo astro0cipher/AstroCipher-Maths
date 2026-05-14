@@ -341,3 +341,24 @@ plotBtn.addEventListener("click", () => {
   ctx.stroke();
 
 });
+#equationInput{
+  width:300px;
+  padding:15px;
+  margin:20px;
+  border-radius:10px;
+}
+
+#plotBtn{
+  padding:15px 25px;
+  background:cyan;
+  border:none;
+  cursor:pointer;
+}
+
+#graphCanvas{
+  display:block;
+  width:800px;
+  height:500px;
+  background:black;
+  margin-top:20px;
+}
