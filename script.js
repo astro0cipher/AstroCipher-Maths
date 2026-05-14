@@ -263,14 +263,42 @@ window.addEventListener('resize', () => {
 
 });
 
+const canvas = document.getElementById("graphCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = canvas.offsetWidth;
+canvas.height = 500;
+
 const input = document.getElementById("equationInput");
+const plotBtn = document.getElementById("plotBtn");
 
 plotBtn.addEventListener("click", () => {
 
   const equation = input.value;
 
-  // parse equation
-  // generate points
-  // draw graph
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  ctx.strokeStyle = "#00e5ff";
+  ctx.lineWidth = 3;
+
+  ctx.beginPath();
+
+  for(let x = -300; x < 300; x++){
+
+    let y;
+
+    try{
+      y = eval(equation);
+    }catch{
+      return;
+    }
+
+    ctx.lineTo(
+      canvas.width/2 + x,
+      canvas.height/2 - y * 20
+    );
+  }
+
+  ctx.stroke();
 
 });
