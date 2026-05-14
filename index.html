@@ -312,34 +312,27 @@
     <p>
       Future of Mathematical Visualization
     </p>
+    <section class="section">
 
-    <section id="interactive-graph" class="section">
+  <h2>Interactive Graph Engine</h2>
 
-  <h2 class="section-title">
-    Interactive Graph Engine
-  </h2>
+  <input
+    type="text"
+    id="equationInput"
+    placeholder="Example: Math.sin(x*0.05)*5"
+  >
 
-  <div class="graph-panel">
+  <button id="plotBtn">
+    Plot Graph
+  </button>
 
-    <div class="graph-controls">
-
-      <input
-        type="text"
-        id="equationInput"
-        placeholder="Enter equation like Math.sin(x)"
-      >
-
-      <button id="plotBtn">
-        Plot Graph
-      </button>
-
-    </div>
-
-    <canvas id="graphCanvas"></canvas>
-
-  </div>
+  <canvas id="graphCanvas"></canvas>
 
 </section>
+
+<script src="script.js"></script>
+
+
 
     <div class="socials">
 
