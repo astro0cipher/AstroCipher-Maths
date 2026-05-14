@@ -262,3 +262,15 @@ window.addEventListener('resize', () => {
   resizeGraphCanvas();
 
 });
+
+const input = document.getElementById("equationInput");
+
+plotBtn.addEventListener("click", () => {
+
+  const equation = input.value;
+
+  // parse equation
+  // generate points
+  // draw graph
+
+});
