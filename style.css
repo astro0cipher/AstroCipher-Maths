@@ -514,3 +514,45 @@ button {
     width: 100%;
   }
 }
+.graph-panel{
+  width:100%;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:25px;
+  padding:30px;
+  backdrop-filter:blur(20px);
+}
+
+.graph-controls{
+  display:flex;
+  gap:20px;
+  margin-bottom:20px;
+}
+
+#equationInput{
+  flex:1;
+  padding:15px;
+  border:none;
+  outline:none;
+  border-radius:15px;
+  background:#111827;
+  color:white;
+  font-size:1rem;
+}
+
+#plotBtn{
+  padding:15px 25px;
+  border:none;
+  border-radius:15px;
+  background:linear-gradient(45deg,#9b5cff,#00e5ff);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+#graphCanvas{
+  width:100%;
+  height:500px;
+  background:#050816;
+  border-radius:20px;
+}
