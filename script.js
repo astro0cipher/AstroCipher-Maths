@@ -262,103 +262,70 @@ window.addEventListener('resize', () => {
   resizeGraphCanvas();
 
 });
-
 const canvas = document.getElementById("graphCanvas");
 const ctx = canvas.getContext("2d");
 
-canvas.width = canvas.offsetWidth;
+canvas.width = 800;
 canvas.height = 500;
 
 const input = document.getElementById("equationInput");
 const plotBtn = document.getElementById("plotBtn");
 
-
-function drawAxes() {
-
-  ctx.strokeStyle = "rgba(255,255,255,0.2)";
-  ctx.lineWidth = 1;
-
-  // X Axis
-  ctx.beginPath();
-  ctx.moveTo(0, canvas.height / 2);
-  ctx.lineTo(canvas.width, canvas.height / 2);
-  ctx.stroke();
-
-  // Y Axis
-  ctx.beginPath();
-  ctx.moveTo(canvas.width / 2, 0);
-  ctx.lineTo(canvas.width / 2, canvas.height);
-  ctx.stroke();
-}
-
-drawAxes();
-
-
-plotBtn.addEventListener("click", () => {
+plotBtn.onclick = function () {
 
   const equation = input.value;
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  drawAxes();
+  // axis
+  ctx.strokeStyle = "white";
 
   ctx.beginPath();
-  ctx.strokeStyle = "#00e5ff";
-  ctx.lineWidth = 3;
-  ctx.shadowBlur = 20;
-  ctx.shadowColor = "#00e5ff";
+  ctx.moveTo(0, canvas.height / 2);
+  ctx.lineTo(canvas.width, canvas.height / 2);
+  ctx.stroke();
 
-  let firstPoint = true;
+  ctx.beginPath();
+  ctx.moveTo(canvas.width / 2, 0);
+  ctx.lineTo(canvas.width / 2, canvas.height);
+  ctx.stroke();
 
-  for (let x = -400; x <= 400; x++) {
+  // graph
+  ctx.beginPath();
+  ctx.strokeStyle = "cyan";
+  ctx.lineWidth = 2;
+
+  let first = true;
+
+  for(let x = -400; x <= 400; x++){
 
     let y;
 
-    try {
+    try{
 
       y = eval(equation);
 
-    } catch (error) {
+    }catch(err){
 
-      alert("Invalid Equation");
+      alert("Wrong equation");
       return;
     }
 
-    const canvasX = canvas.width / 2 + x;
-    const canvasY = canvas.height / 2 - y * 20;
+    let drawX = canvas.width/2 + x;
+    let drawY = canvas.height/2 - y * 20;
 
-    if (firstPoint) {
+    if(first){
 
-      ctx.moveTo(canvasX, canvasY);
-      firstPoint = false;
+      ctx.moveTo(drawX, drawY);
+      first = false;
 
-    } else {
+    }else{
 
-      ctx.lineTo(canvasX, canvasY);
+      ctx.lineTo(drawX, drawY);
+
     }
   }
 
   ctx.stroke();
 
-});
-#equationInput{
-  width:300px;
-  padding:15px;
-  margin:20px;
-  border-radius:10px;
-}
-
-#plotBtn{
-  padding:15px 25px;
-  background:cyan;
-  border:none;
-  cursor:pointer;
-}
-
-#graphCanvas{
-  display:block;
-  width:800px;
-  height:500px;
-  background:black;
-  margin-top:20px;
-}
+};
